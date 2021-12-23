@@ -1,9 +1,9 @@
-let min = 5;// минимуим студентов в группе
-let max = 30;// максимум студентов в группе
-let five = 0;// количество студентов n-ных груп
-let four = 0;
-let three = 0;
-let two = 0;
+let min = 10;// минимуим студентов в группе
+let max = 40;// максимум студентов в группе
+let great = 0;// количество студентов n-ных груп
+let good = 0;
+let middle = 0;
+let bad = 0;
 //класс студент
 class student {
     constructor(names) {
@@ -45,18 +45,18 @@ function generateList(students){
         html+="<p>" + students[i].name + " - ";
             switch (+students[i].progress) {// определение группы студента
             case 5: html+= "отличник";
-                ++five; break;
+                ++great; break;
             case 4: html+= "хорошист";
-                ++four; break;
+                ++good; break;
             case 3: html+= "средний";
-                ++three; break;
+                ++middle; break;
             case 2: html+= "неуспевающий";
-                ++two; break;
+                ++bad; break;
                 default: alert( 'd' ); break;
         }
         html+="</p>";
     }
-    html+="<p>Отличники: "+five+" Хорошисты: "+four+" Средние: "+three+" Неуспивающие: "+two+"</p>";
+    html+="<p>Отличники: "+great+" </p><p>Хорошисты: "+good+" </p><p>Средние: "+middle+" </p><p>Неуспивающие: "+bad+"</p>";
     document.querySelector("#studentsList").innerHTML = html;
 }
 generateList(listStudents);
