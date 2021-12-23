@@ -48,7 +48,7 @@ function generateList(students){
                 ++great; break;
             case 4: html+= "хорошист";
                 ++good; break;
-            case 3: html+= "средний";
+            case 3: html+= "среднячок";
                 ++middle; break;
             case 2: html+= "неуспевающий";
                 ++bad; break;
@@ -56,7 +56,7 @@ function generateList(students){
         }
         html+="</p>";
     }
-    html+="<p>Отличники: "+great+" </p><p>Хорошисты: "+good+" </p><p>Средние: "+middle+" </p><p>Неуспивающие: "+bad+"</p>";
+    html+="<p>Отличники: "+great+" </p><p>Хорошисты: "+good+" </p><p>Среднячков: "+middle+" </p><p>Неуспевающие: "+bad+"</p>";
     document.querySelector("#studentsList").innerHTML = html;
 }
 generateList(listStudents);
